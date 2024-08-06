@@ -197,7 +197,8 @@ void StringData::fretChords(Chord * chord) const
       maxFret = INT32_MIN;
       foreach(Note* note, sortedNotes) {
             if (note->string() != INVALID_STRING_INDEX)
-                  bUsed[note->string()]++;
+                  // bUsed[note->string()]++;
+                  bUsed[note->string()] == 1;
             if (note->fret() != INVALID_FRET_INDEX && note->fret() < minFret)
                   minFret = note->fret();
             if (note->fret() != INVALID_FRET_INDEX && note->fret() > maxFret)
